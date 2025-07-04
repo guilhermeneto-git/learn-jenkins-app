@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run Tests') {
             parallel {
-                stage('Unit Test') {
+                stage('Unit tests') {
                     agent {
                         docker {
                             image 'node:18-alpine'
@@ -37,7 +37,7 @@ pipeline {
                             npm test
                         '''
                     }
-                } 
+                }
 
                 stage('E2E') {
                     agent {
@@ -54,7 +54,7 @@ pipeline {
                             npx playwright test --reporter=html
                         '''
                     }
-                } 
+                }
             }
         }
     }
