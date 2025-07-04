@@ -2,16 +2,6 @@ pipeline {
     agent any
 
     stages {
-        // This is a simple comment
-        /*
-            this 
-            is 
-            a 
-            block
-            comment
-        */
-        // to comment linux commands uses # synbol
-        
         stage('Build') {
             agent {
                 docker {
@@ -42,6 +32,22 @@ pipeline {
                     echo "Test stage"
                     test -f build/index.html
                     npm test
+                '''
+            }
+        } 
+
+        stage('E2E') {
+            agent {
+                docker {
+                    image 'mcr.microsoft.com/playwright:v1.53.0-noble'
+                    reuseNode true
+                }
+            }
+            steps {
+                sh '''
+                    npm install -g serve
+                    serve -s build
+                    npx playwright test
                 '''
             }
         } 
