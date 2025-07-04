@@ -2,6 +2,16 @@ pipeline {
     agent any
 
     stages {
+        // This is a simple comment
+        /*
+            this 
+            is 
+            a 
+            block
+            comment
+        */
+        // to comment linux commands uses # synbol
+        
         stage('Build') {
             agent {
                 docker {
