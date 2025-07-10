@@ -18,3 +18,27 @@ CD (Continuos Delivery)
 DOC
 https://docs.netlify.com/get-started/
 https://docs.netlify.com/cli/get-started/ - to install CLI tools
+
+
+Installation:
+
+Obs: Some stuffs already went done before this next step, but there are some comments on the Jenkinsfile in the deploy stage.
+
+To generate the token for secrets:
+Profile -> User settings -> Applications -> New Access Token (in Personal Access Token) ->
+Fillup 'Description of your token' with 'Jenkins' to know why we are creating it ->
+Expiration as '30' or '60' days.
+Click on 'Generate Token' button ->
+Copy the token generated to use it on Jenkinsfile.
+
+To complete configuration and understanding access the udemy course:
+https://www.udemy.com/course/jenkins-ci-cd-pipelines-devops-for-beginners/learn/lecture/42640552#questions (lession 49).
+  The token generated on netlify must be paste on the jenkins in:
+    Dashboard -> Manage Jenkins -> Credentials -> System -> Global Credentials -> Add Credentials ->
+    Kind as Secret text -> Scope as Global -> Secret (paste de token generated from netlify) ->
+    ID as netlify-token (use it on the pipeline later) -> Create
+
+
+https://cli.netlify.com/commands/status/
+
+

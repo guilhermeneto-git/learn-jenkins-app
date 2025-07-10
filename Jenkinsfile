@@ -6,6 +6,7 @@ pipeline {
             id found in the netlify project configuration (Site ID or Project ID info - https://app.netlify.com/projects/reliable-toffee-e528a7/configuration/general)
         */
         NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
+        NETLIFY_AUTH_TOKEN = credentials('netlify-token') // credentials ID created on jenkins that stored the token created on netlify
     }
 
     stages {
@@ -88,6 +89,7 @@ pipeline {
                     npm install netlify-cli@20.1.1
                     node_modules/.bin/netlify --version
                     echo "Deploying to production. Site ID: $NETLIFY_SITE_ID"
+                    node_modules/.bin/netlify status
                 '''
             }
         }
