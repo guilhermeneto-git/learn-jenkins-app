@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    environment {
+        /* to deploy app
+            id found in the netlify project configuration (Site ID or Project ID info - https://app.netlify.com/projects/reliable-toffee-e528a7/configuration/general)
+        */
+        NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
+    }
+
     stages {
 
         stage('Build') {
@@ -80,6 +87,7 @@ pipeline {
                 sh '''
                     npm install netlify-cli@20.1.1
                     node_modules/.bin/netlify --version
+                    echo "Deploying to production. Site ID: $NETLIFY_SITE_ID"
                 '''
             }
         }
