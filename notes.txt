@@ -6,6 +6,15 @@ Pass: 1234
 email: guilherme.fn.neto@gmail.com
 
 
+CI (Continuos Integration)
+
 In jenkins, install the plugin available Stage View (to see the graph view)
 In jenkins, install the plugin available Docker Pipeline (to manage pipelines)
 In jenkins, install the plugin available Ocean Blue (stage view friendly)
+
+
+CD (Continuos Delivery)
+
+DOC
+https://docs.netlify.com/get-started/
+https://docs.netlify.com/cli/get-started/ - to install CLI tools
