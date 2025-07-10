@@ -5,6 +5,8 @@ Pass: 1234
 
 email: guilherme.fn.neto@gmail.com
 
+The pipeline created to be used on jenkins: learn-jenkins-app
+
 
 CI (Continuos Integration)
 
