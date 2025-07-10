@@ -1,0 +1,11 @@
+Credentials to Login in jenkins http://localhost:8080 :
+
+User: guilherme
+Pass: 1234
+
+email: guilherme.fn.neto@gmail.com
+
+
+In jenkins, install the plugin available Stage View (to see the graph view)
+In jenkins, install the plugin available Docker Pipeline (to manage pipelines)
+In jenkins, install the plugin available Ocean Blue (stage view friendly)
