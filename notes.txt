@@ -43,4 +43,6 @@ https://www.udemy.com/course/jenkins-ci-cd-pipelines-devops-for-beginners/learn/
 
 https://cli.netlify.com/commands/status/
 
+Triggers to configure when the pipeline will run.
+
 
