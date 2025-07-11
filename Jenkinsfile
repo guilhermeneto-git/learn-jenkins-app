@@ -84,6 +84,10 @@ pipeline {
                     reuseNode true
                 }
             }
+
+            environment {
+                CI_ENVIRONMENT_URL = 'STAGING_URL_TO_BE_SET'
+            }
             
             steps {
                 sh '''
@@ -122,7 +126,7 @@ pipeline {
                 }
             }
 
-             environment {
+            environment {
                 CI_ENVIRONMENT_URL = 'https://reliable-toffee-e528a7.netlify.app'
             }
             
