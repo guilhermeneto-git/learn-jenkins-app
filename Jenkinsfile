@@ -7,7 +7,7 @@ pipeline {
         */
         NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token') // credentials ID created on jenkins that stored the token created on netlify
-        REACT_APP_VERSION = '1.2.3'
+        REACT_APP_VERSION = "1.0.$BUILD_ID"
     }
 
     stages {
