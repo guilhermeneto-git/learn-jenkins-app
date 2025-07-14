@@ -53,3 +53,9 @@ https://hub.docker.com/
 Docker images for microsoft
 https://hub.docker.com/r/microsoft/dotnet
 
+
+
+AWS (Amazon Web Services)
+
+https://aws.amazon.com/cli/
+https://docs.aws.amazon.com/cli/latest/
