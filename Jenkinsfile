@@ -7,6 +7,7 @@ pipeline {
         */
         NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token') // credentials ID created on jenkins that stored the token created on netlify
+        REACR_APP_VERSION = '1.2.3'
     }
 
     stages {
@@ -109,13 +110,13 @@ pipeline {
      
         }
 
-        stage('Approval') {
+        /*stage('Approval') {
             steps {
                 timeout(time: 15, unit: 'MINUTES') {
                     input message: 'Do you wish to deploy to production?', ok: 'Yes, I\'m sure!'
                 }
             }
-        }
+        }*/
 
         stage('Deploy prod') {
             agent {
