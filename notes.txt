@@ -46,3 +46,10 @@ https://cli.netlify.com/commands/status/
 Triggers to configure when the pipeline will run.
 
 
+
+Docker images: To figure out the properly image:
+https://hub.docker.com/
+
+Docker images for microsoft
+https://hub.docker.com/r/microsoft/dotnet
+
