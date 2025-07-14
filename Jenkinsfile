@@ -12,11 +12,12 @@ pipeline {
 
     stages {
 
-        stage('Docker') {
+        // moved to the Jenkinsfile-nightly file to run during in another time (every night in this case)
+        /*stage('Docker') {
             steps {
                 sh 'docker build -t my-playwright .'
             }
-        }
+        }*/
 
         stage('Build') {
             agent {
