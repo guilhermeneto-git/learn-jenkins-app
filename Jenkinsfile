@@ -51,9 +51,12 @@ pipeline {
                     args "-u root --entrypoint='' --network host"
                 }
             }
-            
+
             steps {
-                sh 'docker build -t myjenkinsapp .'
+                sh '''
+                    amazon-linux-extras install docker
+                    docker build -t myjenkinsapp .
+                '''
             }
         }
 
