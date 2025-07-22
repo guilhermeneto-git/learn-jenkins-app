@@ -59,3 +59,13 @@ AWS (Amazon Web Services)
 
 https://aws.amazon.com/cli/
 https://docs.aws.amazon.com/cli/latest/
+
+// cluster
+https://us-east-1.console.aws.amazon.com/ecs/v2/create-cluster?region=us-east-1
+
+// estimativa de pagamento
+https://calculator.aws/#/estimate
+
+https://nginx.org/en/
+
+https://hub.docker.com/_/nginx

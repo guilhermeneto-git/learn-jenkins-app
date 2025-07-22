@@ -5,9 +5,11 @@ pipeline {
         /* to deploy app
             id found in the netlify project configuration (Site ID or Project ID info - https://app.netlify.com/projects/reliable-toffee-e528a7/configuration/general)
         */
-        NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
-        NETLIFY_AUTH_TOKEN = credentials('netlify-token') // credentials ID created on jenkins that stored the token created on netlify
+        // NETLIFY_SITE_ID = '4d419bbc-919f-4149-8539-ac14593bea83'
+        // NETLIFY_AUTH_TOKEN = credentials('netlify-token') // credentials ID created on jenkins that stored the token created on netlify
+        
         REACT_APP_VERSION = "1.0.$BUILD_ID"
+        AWS_DEFAULT_REGION = 'us-east-1'
     }
 
     stages {
@@ -59,6 +61,7 @@ pipeline {
                         echo "Hello S3!" > index.html
                         aws s3 cp index.html s3://$AWS_S3_BUCKET/index.html
                         aws s3 sync build s3://$AWS_S3_BUCKET
+                        aws ecs register-task-definition --cli-input-json aws/task-definition-prod.json
                     '''
                 }
                
