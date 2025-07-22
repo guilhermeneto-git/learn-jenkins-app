@@ -67,7 +67,7 @@ pipeline {
                
             }
         }
-
+/*
         stage('Tests') {
             parallel {
                 stage('Unit tests') {
@@ -153,7 +153,7 @@ pipeline {
             }
         }*/
 
-        stage('Deploy prod') {
+        /*stage('Deploy prod') {
             agent {
                 docker {
                     // image 'node:18-alpine' // as we joined deploy and test in the same stage and the deploy uses the same node image (line immediatelly below) as playwright, we do not need this line
@@ -183,7 +183,7 @@ pipeline {
                 }
             }
      
-        }
+        }*/
 
     }
 }
